@@ -1,10 +1,16 @@
 <<<<<<< HEAD
-test5_v2.1 file
+<<<<<<< HEAD
+test5_v2.2 file
 A
-B-350
+B-400
 =======
-test5_v2.1 file
+test5_v2.2 file
 A
-B-350
+B-400
 >>>>>>> version2.1
+=======
+test5_v2.2 file
+A
+B-400
+>>>>>>> version2.2
 D
