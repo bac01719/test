@@ -26,16 +26,37 @@
 			<th>nSNPs</th>
 			<th>Edges_total</th>
 			<th>Edges_mutations</th>
+			<th>Network</th>
 		</tr>
 	</thead>
-    <tbody></tbody>
+    <tbody id="data-output"></tbody>
   </table>
 
   <script>
     fetch('data/superclass.sum.json')
-      .then(res => res.json())
-      .then(json => console.log(json));
-      
+		.then(function(response){
+			return response.json();
+		})
+		.then(function(superclasses){
+			let placeholder=document.querySelector("#data-output");
+			let out="";
+			for(let row of superclasses){
+				out+= `
+					<tr>
+						<td>${row.superclass}</td>
+						<td>${row.class}</td>
+						<td>${row.subclass}</td>
+						<td>${row.subsystems}</td>
+						<td>${row.proteins}</td>
+						<td>${row.proteins_with_mutations}</td>
+						<td>${row.links_total}</td>
+						<td>${links_mutations}</td>
+						<td><img src='${row.network_path}'></td>
+					</tr>
+				`;
+			}
+			placeholder.innerHTML=out;				
+		})
   </script>
 </body>
 </html>
