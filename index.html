@@ -31,22 +31,11 @@
     <tbody></tbody>
   </table>
 
-
-[1] "superclass"              "class"                   "subclass"                "subsystems"             
-[5] "proteins"                "proteins_with_mutations" "mutations"               "links_total"            
-[9] "links_mutations
   <script>
     fetch('data/superclass.sum.json')
       .then(res => res.json())
-      .then(data => {
-        const tbody = document.querySelector('#summary-table tbody');
-        data.forEach(row => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = `<td>${row.superclass}</td><td>${row.class}</td><td>${row.subclass}</td><td>${row.subsystems}</td><td>${row.proteins}</td><td>${row.proteins_with_mutations}</td><td>${row.links_total}</td><td>${links_mutations}</td>`;
-          tr.onclick = () => window.location.href = `detail.html?id=${row.id}`;
-          tbody.appendChild(tr);
-        });
-      });
+      .then(json => console.log(json));
+      );
   </script>
 </body>
 </html>
