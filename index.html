@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERS5298488</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    tr:hover { background-color: #f1f1f1; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Superclass Summary</h1>
+  <table id="summary-table">
+    <thead>
+		<tr>
+			<th>Superclass</th>
+			<th>Class</th>
+			<th>Subclass</th>
+			<th>Subsystems</th>
+			<th>Proteins</th>
+			<th>Proteins_with_nSNPs</th>
+			<th>nSNPs</th>
+			<th>Edges_total</th>
+			<th>Edges_mutations</th>
+		</tr>
+	</thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    fetch('data/superclass.sum.json')
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector('#summary-table tbody');
+        data.forEach(row => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${row.id}</td><td>${row.name}</td><td>${row.count}</td>`;
+          tr.onclick = () => window.location.href = `detail.html?id=${row.id}`;
+          tbody.appendChild(tr);
+        });
+      });
+  </script>
+</body>
+</html>
