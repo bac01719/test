@@ -1,0 +1,82 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERS5298488</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+	tr:hover { background-color: #f1f1f1; cursor: pointer; }
+	
+	.header-row {
+		display: contents;
+	}
+	
+	.header-row th {
+		position: sticky;
+		top: 0;
+		background: white;
+	}
+	
+	.row-link {
+		display: block;
+		padding: 8px;
+		text-decoration: none;
+		color: blue;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Superclass Summary</h1>
+  <table id="summary-table">
+    <thead>
+		<tr class="header-row">
+			<th>Superclass</th>
+			<th>Class</th>
+			<th>Subclass</th>
+			<th>Subsystems</th>
+			<th>Proteins</th>
+			<th>Proteins_with_nSNPs</th>
+			<th>nSNPs</th>
+			<th>Edges_total</th>
+			<th>Edges_mutations</th>
+			<th>Network</th>
+		</tr>
+	</thead>
+    <tbody id="data-output"></tbody>
+  </table>
+
+  <script>
+    fetch('data/superclass.sum.json')
+		.then(function(response){
+			return response.json();
+		})
+		.then(function(superclasses){
+			let placeholder=document.querySelector("#data-output");
+			let out="";
+			for(let row of superclasses){
+				out+= `
+					<tr>
+						<td>${row.superclass}</td>
+						<td>${row.class}</td>
+						<td>${row.subclass}</td>
+						<td>${row.subsystems}</td>
+						<td>${row.proteins}</td>
+						<td>${row.proteins_with_mutations}</td>
+						<td>${row.mutations}</td>
+						<td>${row.links_total}</td>
+						<td>${row.links_mutations}</td>
+						<td><a href='${row.details_path}' class='row-link'>Details</a><br/><img src='${row.network_path}'></td>
+					</tr>					
+				`;
+			}
+			placeholder.innerHTML=out;	
+			
+		})
+  </script>
+</body>
+</html>
