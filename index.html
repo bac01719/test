@@ -64,10 +64,11 @@
 						<td>${row.links_mutations}</td>
 						<td><img src='${row.network_path}'></td>
 					</tr>
+					tr.onclick = () => window.location.href = `detail.html?id=${row.superclass}`;
 				`;
 			}
 			placeholder.innerHTML=out;	
-			placeholder.onclick = () => window.location.href = `detail.html?id=${row.superclass}`;
+			
 		})
   </script>
 </body>
