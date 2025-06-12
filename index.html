@@ -9,7 +9,7 @@
     body { font-family: sans-serif; padding: 20px; }
     table { border-collapse: collapse; width: 100%; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    tr:hover { background-color: #f1f1f1; cursor: pointer; }
+	tr:hover { background-color: #f1f1f1; cursor: pointer; }
 	.header-row {
 		display: contents;
 	}
@@ -18,6 +18,13 @@
 		position: sticky;
 		top: 0;
 		background: white;
+	}
+	
+	.row-link {
+		display: block;
+		padding: 8px;
+		text-decoration: none;
+		color: inherit;
 	}
   </style>
 </head>
@@ -62,9 +69,8 @@
 						<td>${row.mutations}</td>
 						<td>${row.links_total}</td>
 						<td>${row.links_mutations}</td>
-						<td><img src='${row.network_path}'></td>
-					</tr>
-					tr.onclick = () => window.location.href = detail.html?id=${row.superclass};
+						<td><a href='${row.superclass}' class='row-link'>Details</a><br/><img src='${row.network_path}'></td>
+					</tr>					
 				`;
 			}
 			placeholder.innerHTML=out;	
