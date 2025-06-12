@@ -9,9 +9,7 @@
     body { font-family: sans-serif; padding: 20px; }
     table { border-collapse: collapse; width: 100%; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-	<!--
 	tr:hover { background-color: #f1f1f1; cursor: pointer; }
-	-->
 	
 	.header-row {
 		display: contents;
@@ -72,7 +70,7 @@
 						<td>${row.mutations}</td>
 						<td>${row.links_total}</td>
 						<td>${row.links_mutations}</td>
-						<td><a href='${row.superclass}' class='row-link'>Details</a><br/><img src='${row.network_path}'></td>
+						<td><a href='${row.details_path}' class='row-link'>Details</a><br/><img src='${row.network_path}'></td>
 					</tr>					
 				`;
 			}
