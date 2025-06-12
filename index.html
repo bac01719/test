@@ -66,7 +66,8 @@
 					</tr>
 				`;
 			}
-			placeholder.innerHTML=out;				
+			placeholder.innerHTML=out;	
+			placeholder.onclick = () => window.location.href = `detail.html?id=${row.id}`;
 		})
   </script>
 </body>
