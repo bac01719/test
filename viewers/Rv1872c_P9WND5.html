@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rv1872c - P9WND5 (pim:  100.00 )</title>
+  <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    #viewer_3Dmoljs { width: 100%; height: 80%; }
+  </style>
+</head>
+<body>
+
+<div id="viewer_3Dmoljs"></div>
+<h1>Rv1872c - P9WND5 (pim:  100.00 )</h1>
+
+<script>
+  const element = document.getElementById("viewer_3Dmoljs");
+  const viewer = $3Dmol.createViewer(element, { backgroundColor: "white" });
+
+  // List of mutations: { residue number, mutation label }
+  const mutations = [
+    { chain: 'A', resi: 253, label: "A:V253M", color: "red" },
+    { chain: 'A', resi: 59, label: "A:G59A", color: "blue" }
+  ];
+
+  const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WND5-F1-model_v4.pdb";
+
+  fetch(pdbUrl)
+    .then(response => response.text())
+    .then(pdbData => {
+      viewer.addModel(pdbData, "pdb");
+
+      // Show whole structure
+      viewer.setStyle({}, { cartoon: { color: "spectrum" } });
+
+      // Apply highlights for each mutation
+      const model = viewer.getModel();
+      mutations.forEach(mutation => {
+        viewer.setStyle(
+          { chain: mutation.chain,resi: mutation.resi },
+          {
+            stick: { colorscheme: "greenCarbon", radius: 0.25 },
+            sphere: { color: mutation.color, radius: 1.5 }
+          }
+        );
+
+        const atom = model.selectedAtoms({ chain: mutation.chain,resi: mutation.resi })[0];
+        if (atom) {
+          viewer.addLabel(mutation.label, {
+            position: { x: atom.x, y: atom.y, z: atom.z },
+            backgroundColor: "black",
+            fontColor: "white",
+            inFront: true
+          });
+        }
+      });
+
+      viewer.zoomTo();
+      viewer.render();
+    })
+    .catch(err => console.error("Error loading pdb structure:", err));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rv2139 - 4XQ6 (res:  2.00  pim:  98.13 )</title>
+  <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    #viewer_3Dmoljs { width: 100%; height: 80%; }
+  </style>
+</head>
+<body>
+
+<!-- Viewer container -->
+<div id="viewer_3Dmoljs"></div>
+<h1>Rv2139 - 4XQ6 (res:  2.00  pim:  98.13 )</h1>
+
+<script>
+  const element = document.getElementById("viewer_3Dmoljs");
+  const viewer = $3Dmol.createViewer(element, { backgroundColor: "white" });
+
+  // Download and load PDB
+  const pdbUrl = "https://files.rcsb.org/download/4XQ6.pdb";
+
+  fetch(pdbUrl)
+    .then(response => response.text())
+    .then(pdbData => {
+      viewer.addModel(pdbData, "pdb");
+
+      // Set cartoon style for the whole structure
+      viewer.setStyle({}, { cartoon: { color: "spectrum" } });
+
+      // Highlight residue
+      viewer.setStyle(
+		{ chain: 'A', resi: 339 },
+        {
+          stick: { colorscheme: "greenCarbon", radius: 0.25 },
+          sphere: { color: "red", radius: 1.5 }
+        }
+      );
+
+      // Add label to residue
+      const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 339 })[0];
+      if (atomres) {
+        viewer.addLabel("A:G339S", {
+          position: { x: atomres.x, y: atomres.y, z: atomres.z },
+          backgroundColor: "black",
+          fontColor: "white",
+          inFront: true
+        });
+      }
+
+      viewer.zoomTo();
+      viewer.render();
+    })
+    .catch(err => {
+      console.error("Error loading PDB structure:", err);
+    });
+</script>
+
+</body>
+</html>
