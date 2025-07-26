@@ -21,7 +21,7 @@
   const viewer = $3Dmol.createViewer(element, { backgroundColor: "white" });
 
   // Download and load PDB
-  const pdbUrl = "https://swissmodel.expasy.org/repository/686bb894c1e0aedb8f8f5560.pdb";
+  const pdbUrl = "../pdbs/sm/SM_4V8W.1.A.pdb";
 
   fetch(pdbUrl)
     .then(response => response.text())
@@ -43,7 +43,7 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 2771 })[0];
       if (atomres) {
-        viewer.addLabel("A:C2771R", {
+        viewer.addLabel("A:C2771R(84)", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
