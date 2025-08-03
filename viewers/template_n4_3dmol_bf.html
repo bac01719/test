@@ -14,6 +14,26 @@
 <div id="viewer_3Dmoljs"></div>
 <h1>%PRT% - %PDBNAME%</h1>
 <a href="%NETWORKDETAILS%">Network details</a>
+<h3>Model validation</h3>
+<img src="%PAEDETAILS%">
+<table border="1">
+  <tr>
+    <th>PAE Mean</th>
+	<th>PAE Prop<br/>Under 10</th>
+	<th>PAE Prop<br/>Over 20</th>
+	<th>PAE Max</th>
+	<th>pDLLT Mean</th>
+	<th>pDLLT Prop<br/>Over 80</th>
+  </tr>
+  <tr>
+	<td>%PAEMEAN%</td>
+	<td>%PAEU10%</td>
+	<td>%PAEO20%</td>
+	<td>%PAEMAX%</td>
+	<td>%PDLLTMEAN%</td>
+	<td>%PDLLTO80%</td>
+  </tr>
+</table>  
 
 <script>
   const element = document.getElementById("viewer_3Dmoljs");
