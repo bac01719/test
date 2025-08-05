@@ -16,21 +16,12 @@
 <h1>Rv2524c - SM_4V8W.1.A (pim:  100.00 )</h1>
 <a href="../network_details/268METAB_Enoyl-[ACP]reductasesdisa.html">Network details</a>
 <h3>Model validation</h3>
-<img src="../paes/SM_4V8W.1.A.png">
 <table border="1">
   <tr>
-    <th>PAE Mean</th>
-	<th>PAE Prop<br/>Under 10</th>
-	<th>PAE Prop<br/>Over 20</th>
-	<th>PAE Max</th>
-	<th>pDLLT Mean</th>
-	<th>pDLLT Prop<br/>Over 80</th>
+	<th>Confidence Mean</th>
+	<th>Condidence Prop<br/>Over 80</th>
   </tr>
   <tr>
-NA
-	<td>NA%</td>
-	<td>NA%</td>
-NA
 	<td>74.1</td>
 	<td>45.5%</td>
   </tr>
@@ -49,7 +40,7 @@ NA
       viewer.addModel(pdbData, "pdb");
 
       // Set cartoon style for the whole structure
-      viewer.setStyle({}, { cartoon: { colorfunc: colorByPLDDT } });
+      viewer.setStyle({}, { cartoon: { color: "spectrum" } });
 
       // Highlight residue
       viewer.setStyle(
@@ -63,7 +54,7 @@ NA
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 2771 })[0];
       if (atomres) {
-        viewer.addLabel("A:C2771R(84)", {
+        viewer.addLabel("A:C2771R", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
@@ -77,16 +68,6 @@ NA
     .catch(err => {
       console.error("Error loading PDB structure:", err);
     });
-	
-   // Function to color by pLDDT score stored in B-factor
-  function colorByPLDDT(atom) {
-	let score = atom.b;
-
-	if (score > 90) return "blue";
-	if (score > 70) return "cyan";
-	if (score > 50) return "yellow";
-	return "red";
-  }
 </script>
 
 </body>
