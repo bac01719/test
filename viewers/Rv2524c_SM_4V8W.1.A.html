@@ -23,7 +23,7 @@
   </tr>
   <tr>
 	<td>74.1</td>
-	<td>45.5%</td>
+	<td>%PDLLTO80%</td>
   </tr>
 </table>  
 
@@ -54,7 +54,7 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 2771 })[0];
       if (atomres) {
-        viewer.addLabel("A:C2771R", {
+        viewer.addLabel("A:C2771R(84)", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
