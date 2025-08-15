@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv0290 - P9WNQ3 (pim:  100.00 )</h1>
-<a href="../network_details/125MEMBR_ESAT-6proteinssecretionsy.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WNQ3.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 76, label: "A:S76N(93.07)", color: "red" },
-    { chain: 'A', resi: 95, label: "A:A95T(68.89)", color: "blue" }
+    { chain: 'A', resi: 76, label: "A:S76N(93.1,12.4,13.2%", color: "red" },
+    { chain: 'A', resi: 95, label: "A:A95T(68.9,15.9,3%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WNQ3-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

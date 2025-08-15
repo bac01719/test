@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv0814c - P0CG95 (pim:  100.00 )</h1>
-<a href="../network_details/212METAB_SulfurtransferaseandSsecc.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P0CG95.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 100 })[0];
       if (atomres) {
-        viewer.addLabel("A:T100A(94.87)", {
+        viewer.addLabel("A:T100A(94.9,6.3,53%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

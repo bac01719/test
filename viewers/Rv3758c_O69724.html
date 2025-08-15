@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv3758c - O69724 (pim:  100.00 )</h1>
-<a href="../network_details/6STRES_Cholineuptakeandconversio.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/O69724.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 84 })[0];
       if (atomres) {
-        viewer.addLabel("A:N84D(79.22)", {
+        viewer.addLabel("A:N84D(79.2,10.6,24.5%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

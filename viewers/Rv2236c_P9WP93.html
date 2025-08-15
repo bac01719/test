@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv2236c - P9WP93 (pim:  100.00 )</h1>
-<a href="../network_details/29METAB_Cobalaminsynthesis.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WP93.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 79 })[0];
       if (atomres) {
-        viewer.addLabel("A:S79C(89.22)", {
+        viewer.addLabel("A:S79C(89.2,5.5,42.8%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

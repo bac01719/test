@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv2400c - P71744 (pim:  100.00 )</h1>
-<a href="../network_details/134METAB_Cysteinesynthesis.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P71744.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 76 })[0];
       if (atomres) {
-        viewer.addLabel("A:A76T(98.05)", {
+        viewer.addLabel("A:A76T(98,6,80.2%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

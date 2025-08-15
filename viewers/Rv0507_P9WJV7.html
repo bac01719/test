@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv0507 - P9WJV7 (pim:  100.00 )</h1>
-<a href="../network_details/22MEMBR_Mycobacteriallipidandmult.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WJV7.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 426 })[0];
       if (atomres) {
-        viewer.addLabel("A:R426H(85.80)", {
+        viewer.addLabel("A:R426H(85.8,11.7,11.6%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

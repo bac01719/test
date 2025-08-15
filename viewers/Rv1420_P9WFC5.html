@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv1420 - P9WFC5 (pim:  100.00 )</h1>
-<a href="../network_details/201DNAPR_DNArepairUvrABCsystem.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WFC5.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 289, label: "A:V289I(78.86)", color: "red" },
-    { chain: 'A', resi: 434, label: "A:V434A(94.29)", color: "blue" }
+    { chain: 'A', resi: 289, label: "A:V289I(78.9,16.2,11%", color: "red" },
+    { chain: 'A', resi: 434, label: "A:V434A(94.3,16.4,21.7%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WFC5-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

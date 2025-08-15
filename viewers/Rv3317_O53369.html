@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv3317 - O53369 (pim:  100.00 )</h1>
-<a href="../network_details/162ENERG_Succinatedehydrogenaseand.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/O53369.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 54, label: "A:V54L(98.48)", color: "red" },
-    { chain: 'A', resi: 112, label: "A:T112A(95.45)", color: "blue" }
+    { chain: 'A', resi: 54, label: "A:V54L(98.5,3.6,78.8%", color: "red" },
+    { chain: 'A', resi: 112, label: "A:T112A(95.4,3.6,75%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-O53369-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

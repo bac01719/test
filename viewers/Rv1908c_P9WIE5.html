@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv1908c - P9WIE5 (pim:  100.00 )</h1>
-<a href="../network_details/122STRES_ResistancetoEthionamidean.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WIE5.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 463, label: "A:R463L(97.87)", color: "red" },
-    { chain: 'A', resi: 315, label: "A:S315T(97.81)", color: "blue" }
+    { chain: 'A', resi: 463, label: "A:R463L(97.9,4.5,64.8%", color: "red" },
+    { chain: 'A', resi: 315, label: "A:S315T(97.8,3.7,83.6%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WIE5-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

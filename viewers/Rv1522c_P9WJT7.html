@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 540, label: "A:S540N(64.17)", color: "red" },
-    { chain: 'A', resi: 381, label: "A:S381P(91.65)", color: "blue" }
+    { chain: 'A', resi: 540, label: "A:S540N(64.2,27.1,0.5%", color: "red" },
+    { chain: 'A', resi: 381, label: "A:S381P(91.7,15,13.4%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WJT7-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

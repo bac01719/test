@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv0101 - Q10896 (pim:  100.00 )</h1>
-<a href="../network_details/236CELLE_Activationoffattyacidsasa.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/Q10896.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 1344 })[0];
       if (atomres) {
-        viewer.addLabel("A:A1344V(87.55)", {
+        viewer.addLabel("A:A1344V(87.6,19.5,10%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

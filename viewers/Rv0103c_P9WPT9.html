@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv0103c - P9WPT9 (pim:  100.00 )</h1>
-<a href="../network_details/153MEMBR_CopperTransportSystem.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WPT9.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 250, label: "A:A250V(93.54)", color: "red" },
-    { chain: 'A', resi: 22, label: "A:L22S(82.72)", color: "blue" }
+    { chain: 'A', resi: 250, label: "A:A250V(93.5,14.8,12.2%", color: "red" },
+    { chain: 'A', resi: 22, label: "A:L22S(82.7,15.2,8%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WPT9-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

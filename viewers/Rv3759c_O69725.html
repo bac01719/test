@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv3759c - O69725 (pim:  100.00 )</h1>
-<a href="../network_details/6STRES_Cholineuptakeandconversio.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/O69725.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 85, label: "A:L85P(97.71)", color: "red" },
-    { chain: 'A', resi: 17, label: "A:W17R(53.33)", color: "blue" }
+    { chain: 'A', resi: 85, label: "A:L85P(97.7,5.8,77.1%", color: "red" },
+    { chain: 'A', resi: 17, label: "A:W17R(53.3,26.6,1.4%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-O69725-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

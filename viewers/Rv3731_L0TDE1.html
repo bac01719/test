@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv3731 - L0TDE1 (pim:  100.00 )</h1>
-<a href="../network_details/27DNAPR_DNARepairBaseExcision.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/L0TDE1.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 313 })[0];
       if (atomres) {
-        viewer.addLabel("A:R313H(80.27)", {
+        viewer.addLabel("A:R313H(80.3,8.3,23.6%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

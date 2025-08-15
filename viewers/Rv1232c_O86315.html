@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv1232c - O86315 (pim:  100.00 )</h1>
-<a href="../network_details/65PROTE_Twin-argininetranslocatio.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/O86315.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 149 })[0];
       if (atomres) {
-        viewer.addLabel("A:C149G(70.28)", {
+        viewer.addLabel("A:C149G(70.3,20.2,5.5%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

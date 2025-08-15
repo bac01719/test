@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv0182c - P9WGG5 (pim:  100.00 )</h1>
-<a href="../network_details/61CELLU_Celldivisioninitiationrel.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WGG5.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 332, label: "A:D332Y(94.46)", color: "red" },
-    { chain: 'A', resi: 287, label: "A:G287D(95.51)", color: "blue" }
+    { chain: 'A', resi: 332, label: "A:D332Y(94.5,10,28.1%", color: "red" },
+    { chain: 'A', resi: 287, label: "A:G287D(95.5,8.1,56.8%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WGG5-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

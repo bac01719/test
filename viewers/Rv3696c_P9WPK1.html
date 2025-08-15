@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv3696c - P9WPK1 (pim:  100.00 )</h1>
-<a href="../network_details/20METAB_GlycerolipidandGlyceropho.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WPK1.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 119, label: "A:T119A(94.42)", color: "red" },
-    { chain: 'A', resi: 51, label: "A:P51S(92.97)", color: "blue" }
+    { chain: 'A', resi: 119, label: "A:T119A(94.4,4.4,66.2%", color: "red" },
+    { chain: 'A', resi: 51, label: "A:P51S(93,5.4,53%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WPK1-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMG CoA Synthesis</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+	tr:hover { background-color: #f1f1f1; cursor: pointer; }
+	
+	.header-row {
+		display: contents;
+	}
+	
+	.header-row th {
+		position: sticky;
+		top: 0;
+		background: white;
+	}
+	
+	.row-link {
+		display: block;
+		padding: 8px;
+		text-decoration: none;
+		color: blue;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Subsystem details</h1>
+  <img src="../networks/172METAB_HMGCoASynthesis.png" alt="Subsystem PPI network">
+  <table id="detail-table">
+    <thead>
+		<tr class="header-row">
+			<th>Protein1</th>
+			<th>Protein1_nSNPs</th>
+			<th>Protein1_degree</th>
+			<th>Protein1_betweenness</th>
+			<th>Protein2</th>
+			<th>Protein2_nSNPs</th>
+			<th>Protein2_degree</th>
+			<th>Protein2_betweenness</th>
+		</tr>
+	</thead>
+    <tbody id="data-output"></tbody>
+  </table>
+  <br/>
+  <a href="../index.html">Summary page</a>
+
+  <script>
+    fetch("../data/superclass.dets/172METAB_HMGCoASynthesis.json")
+		.then(function(response){
+			return response.json();
+		})
+		.then(function(superclasses){
+			let placeholder=document.querySelector("#data-output");
+			let out="";
+			for(let row of superclasses){
+				out+= `
+					<tr>
+						<td>${row.protein1}</td>
+						<td>${row.protein1_vars}</td>
+						<td>${row.protein1_degree}</td>
+						<td>${row.protein1_betweenness}</td>
+						<td>${row.protein2}</td>
+						<td>${row.protein2_vars}</td>
+						<td>${row.protein2_degree}</td>
+						<td>${row.protein2_betweenness}</td>
+					</tr>					
+				`;
+			}
+			placeholder.innerHTML=out;	
+			
+		})
+  </script>
+</body>
+</html>

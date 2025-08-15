@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv1661 - P94996 (pim:  100.00 )</h1>
-<a href="../network_details/70METAB_SiderophoreMycobactin.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P94996.png">
 <table border="1">
@@ -41,9 +41,9 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 283, label: "A:D283N(94.86)", color: "red" },
-    { chain: 'A', resi: 814, label: "A:E814A(95.98)", color: "blue" },
-	{ chain: 'A', resi: 2097, label: "A:M2097I(55.78)", color: "yellow" }
+    { chain: 'A', resi: 283, label: "A:D283N(94.9,19.5,14.1%", color: "red" },
+    { chain: 'A', resi: 814, label: "A:E814A(96,20.3,15.1%", color: "blue" },
+	{ chain: 'A', resi: 2097, label: "A:M2097I(55.8,27.8,0.9%", color: "yellow" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P94996-F1-model_v4.pdb";
@@ -73,6 +73,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

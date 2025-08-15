@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv1295 - P9WG59 (pim:  100.00 )</h1>
-<a href="../network_details/189METAB_AspartatetoThreonineModul.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WG59.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 237 })[0];
       if (atomres) {
-        viewer.addLabel("A:G237S(97.86)", {
+        viewer.addLabel("A:G237S(97.9,4.3,70.4%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }

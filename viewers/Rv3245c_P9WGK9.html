@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv3245c - P9WGK9 (pim:  100.00 )</h1>
-<a href="../network_details/222STRES_Actinobacterialsignaltran.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WGK9.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 517, label: "A:M517L(93.25)", color: "red" },
-    { chain: 'A', resi: 18, label: "A:P18S(56.63)", color: "blue" }
+    { chain: 'A', resi: 517, label: "A:M517L(93.2,16.3,18.5%", color: "red" },
+    { chain: 'A', resi: 18, label: "A:P18S(56.6,24.5,0.9%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WGK9-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

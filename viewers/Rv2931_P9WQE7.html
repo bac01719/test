@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv2931 - P9WQE7 (pim:  100.00 )</h1>
-<a href="../network_details/57CELLE_Mycobacterialcellwallviru.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WQE7.png">
 <table border="1">
@@ -41,10 +41,10 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 877, label: "A:R877H(95.64)", color: "red" },
-    { chain: 'A', resi: 1194, label: "A:L1194R(86.41)", color: "blue" },
-	{ chain: 'A', resi: 624, label: "A:D624E(65.87)", color: "yellow" },
-	{ chain: 'A', resi: 803, label: "A:A803T(93.17)", color: "purple" },
+    { chain: 'A', resi: 877, label: "A:R877H(95.6,19.6,15.3%", color: "red" },
+    { chain: 'A', resi: 1194, label: "A:L1194R(86.4,24.5,7.5%", color: "blue" },
+	{ chain: 'A', resi: 624, label: "A:D624E(65.9,20.8,4%", color: "yellow" },
+	{ chain: 'A', resi: 803, label: "A:A803T(93.2,21.5,7.1%", color: "purple" },
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WQE7-F1-model_v4.pdb";
@@ -74,6 +74,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

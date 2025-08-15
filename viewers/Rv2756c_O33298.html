@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv2756c - O33298 (pim:  100.00 )</h1>
-<a href="../network_details/215DNAPR_TypeIrestriction-modifica.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/O33298.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 325, label: "A:G325R(97.90)", color: "red" },
-    { chain: 'A', resi: 306, label: "A:L306P(92.97)", color: "blue" }
+    { chain: 'A', resi: 325, label: "A:G325R(97.9,7.4,47.1%", color: "red" },
+    { chain: 'A', resi: 306, label: "A:L306P(93,6.4,57.5%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-O33298-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

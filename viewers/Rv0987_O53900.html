@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv0987 - O53900 (pim:  100.00 )</h1>
-<a href="../network_details/120MEMBR_AttEFGHABCTransportSystem.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/O53900.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 372, label: "A:A372V(89.75)", color: "red" },
-    { chain: 'A', resi: 717, label: "A:F717V(80.82)", color: "blue" }
+    { chain: 'A', resi: 372, label: "A:A372V(89.8,9.1,16.9%", color: "red" },
+    { chain: 'A', resi: 717, label: "A:F717V(80.8,8.4,15.6%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-O53900-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

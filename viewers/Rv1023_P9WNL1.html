@@ -13,7 +13,7 @@
 
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv1023 - P9WNL1 (pim:  100.00 )</h1>
-<a href="../network_details/132ENERG_GlycolysisandGluconeogene.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/P9WNL1.png">
 <table border="1">
@@ -41,8 +41,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 8, label: "A:R8G(98.76)", color: "red" },
-    { chain: 'A', resi: 429, label: "A:K429Q(33.27)", color: "blue" }
+    { chain: 'A', resi: 8, label: "A:R8G(98.8,3.2,87.5%", color: "red" },
+    { chain: 'A', resi: 429, label: "A:K429Q(33.3,17.4,0.6%", color: "blue" }
   ];
 
   const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-P9WNL1-F1-model_v4.pdb";
@@ -72,6 +72,7 @@
             position: { x: atom.x, y: atom.y, z: atom.z },
             backgroundColor: "black",
             fontColor: "white",
+			fontSize: 12,
             inFront: true
           });
         }

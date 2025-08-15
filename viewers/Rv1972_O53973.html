@@ -14,7 +14,7 @@
 <!-- Viewer container -->
 <div id="viewer_3Dmoljs"></div>
 <h1>Rv1972 - O53973 (pim:  100.00 )</h1>
-<a href="../network_details/34STRES_Cellinvasion-relatedvirul.html">Network details</a>
+<a href="../NA">Network details</a>
 <h3>Model validation</h3>
 <img src="../paes/O53973.png">
 <table border="1">
@@ -63,10 +63,11 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 124 })[0];
       if (atomres) {
-        viewer.addLabel("A:H124Q(93.65)", {
+        viewer.addLabel("A:H124Q(93.7,11.2,40.8%", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
+		  fontSize: 12,
           inFront: true
         });
       }
