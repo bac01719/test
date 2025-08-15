@@ -63,7 +63,7 @@
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 191 })[0];
       if (atomres) {
-        viewer.addLabel("A:R191S(78.7,26.5,3.9%", {
+        viewer.addLabel("A:R191S(78.7,26.5,3.9%)", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
