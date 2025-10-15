@@ -28,7 +28,7 @@ Label format: [chain]:[wildtype][pos][mutant](pLDDT,mean PAE, proportion of PAE<
   </tr>
   <tr>
 	<td>4.2</td>
-	<td>73.5%</td>
+	<td>80.6%</td>
 	<td>28</td>
 	<td>96.4</td>
 	<td>93.1%</td>
@@ -42,11 +42,11 @@ Label format: [chain]:[wildtype][pos][mutant](pLDDT,mean PAE, proportion of PAE<
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'A', resi: 178, label: "A:S178G(92.7,10.1,32.2%)", color: "red" },
-    { chain: 'A', resi: 276, label: "A:V276A(75.6,13.9,3.3%)", color: "blue" }
+    { chain: 'A', resi: 178, label: "A:S178G(92.7,10.1,40.8%)", color: "red" },
+    { chain: 'A', resi: 276, label: "A:V276A(75.6,13.9,13.9%)", color: "blue" }
   ];
 
-  const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-O53929-F1-model_v4.pdb";
+  const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-O53929-F1-model_v6.pdb";
 
   fetch(pdbUrl)
     .then(response => response.text())

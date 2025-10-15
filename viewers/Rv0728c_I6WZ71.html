@@ -29,7 +29,7 @@ Label format: [chain]:[wildtype][pos][mutant](pLDDT,mean PAE, proportion of PAE<
   </tr>
   <tr>
 	<td>3.7</td>
-	<td>75.8%</td>
+	<td>86.1%</td>
 	<td>30</td>
 	<td>96.8</td>
 	<td>98.2%</td>
@@ -42,7 +42,7 @@ Label format: [chain]:[wildtype][pos][mutant](pLDDT,mean PAE, proportion of PAE<
   const viewer = $3Dmol.createViewer(element, { backgroundColor: "white" });
 
   // Download and load PDB
-  const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-I6WZ71-F1-model_v4.pdb";
+  const pdbUrl = "https://alphafold.ebi.ac.uk/files/AF-I6WZ71-F1-model_v6.pdb";
 
   fetch(pdbUrl)
     .then(response => response.text())
@@ -64,7 +64,7 @@ Label format: [chain]:[wildtype][pos][mutant](pLDDT,mean PAE, proportion of PAE<
       // Add label to residue
       const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 242 })[0];
       if (atomres) {
-        viewer.addLabel("A:R242H(97.5,3.2,83.6%)", {
+        viewer.addLabel("A:R242H(97.5,3.2,95.1%)", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",
