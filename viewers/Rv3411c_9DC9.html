@@ -85,12 +85,42 @@
 	  <tr>
 		<td>A</th>
 		<td>A</td>
-		<td>281</td>
+		<td>391</td>
 		<td>T</td>
 		<td>0.93</td>
 	  </tr>
 	</tr> 
 </table>
+<br/><br/>
+
+<h3>CONSURF details</h3>
+<table border="1">
+  <tr>
+    <th>Chain</th>
+	<th>Wildtype</th>
+	<th>Residue</th>
+	<th>Mutation</th>
+	<th>Average Pairwise<br/>Distance</th>
+	<th>Buried/Exposed</th>
+	<th>MSA data</th>
+	<th>Conservation<br/>(1-variable,9-conserved)</th>
+	<th>Wildtype</br>prevalence(%)</th>
+	<th>Mutation<br/>prevalence(%)</th>
+  </tr>
+  <tr>
+	<td>A</th>
+	<td>A</td>
+	<td>391</td>
+	<td>T</td>
+	<td>0.5(0.1,0.7)</td>
+	<td>b</td>
+	<td>150/150</td>
+	<td>9(9,9)</td>
+	<td>98.7</td>
+	<td>0</td>
+  </tr>
+</table> 
+<br/><br/>
 
 <a href="../network_details/82METAB_IMPandXanthineconversiont.html">Network details</a>
 
@@ -111,7 +141,7 @@
 
       // Highlight residue
       viewer.setStyle(
-		{ chain: 'A', resi: 281 },
+		{ chain: 'A', resi: 391 },
         {
           stick: { colorscheme: "greenCarbon", radius: 0.25 },
           sphere: { color: "red", radius: 1.5 }
@@ -119,9 +149,9 @@
       );
 
       // Add label to residue
-      const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 281 })[0];
+      const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 391 })[0];
       if (atomres) {
-        viewer.addLabel("A:A281T", {
+        viewer.addLabel("A:A391T", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",

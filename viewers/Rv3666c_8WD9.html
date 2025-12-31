@@ -83,14 +83,44 @@
 		<th>QMEAN</th>
 	  </tr>
 	  <tr>
-		<td>C</th>
+		<td>D</th>
 		<td>Q</td>
 		<td>497</td>
 		<td>R</td>
-		<td>0.8</td>
+		<td>0.78</td>
 	  </tr>
 	</tr> 
 </table>
+<br/><br/>
+
+<h3>CONSURF details</h3>
+<table border="1">
+  <tr>
+    <th>Chain</th>
+	<th>Wildtype</th>
+	<th>Residue</th>
+	<th>Mutation</th>
+	<th>Average Pairwise<br/>Distance</th>
+	<th>Buried/Exposed</th>
+	<th>MSA data</th>
+	<th>Conservation<br/>(1-variable,9-conserved)</th>
+	<th>Wildtype</br>prevalence(%)</th>
+	<th>Mutation<br/>prevalence(%)</th>
+  </tr>
+  <tr>
+	<td>D</th>
+	<td>Q</td>
+	<td>497</td>
+	<td>R</td>
+	<td>1.1(0.2,1.8)</td>
+	<td>e</td>
+	<td>147/150</td>
+	<td>4(4,4)</td>
+	<td>18.4</td>
+	<td>6.8</td>
+  </tr>
+</table> 
+<br/><br/>
 
 <a href="../network_details/101MEMBR_DppdipeptideABCtransports.html">Network details</a>
 
@@ -111,7 +141,7 @@
 
       // Highlight residue
       viewer.setStyle(
-		{ chain: 'C', resi: 497 },
+		{ chain: 'D', resi: 497 },
         {
           stick: { colorscheme: "greenCarbon", radius: 0.25 },
           sphere: { color: "red", radius: 1.5 }
@@ -119,9 +149,9 @@
       );
 
       // Add label to residue
-      const atomres = viewer.getModel().selectedAtoms({ chain: 'C', resi: 497 })[0];
+      const atomres = viewer.getModel().selectedAtoms({ chain: 'D', resi: 497 })[0];
       if (atomres) {
-        viewer.addLabel("C:Q497R", {
+        viewer.addLabel("D:Q497R", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",

@@ -85,12 +85,42 @@
 	  <tr>
 		<td>A</th>
 		<td>G</td>
-		<td>106</td>
+		<td>104</td>
 		<td>S</td>
 		<td>0.92</td>
 	  </tr>
 	</tr> 
 </table>
+<br/><br/>
+
+<h3>CONSURF details</h3>
+<table border="1">
+  <tr>
+    <th>Chain</th>
+	<th>Wildtype</th>
+	<th>Residue</th>
+	<th>Mutation</th>
+	<th>Average Pairwise<br/>Distance</th>
+	<th>Buried/Exposed</th>
+	<th>MSA data</th>
+	<th>Conservation<br/>(1-variable,9-conserved)</th>
+	<th>Wildtype</br>prevalence(%)</th>
+	<th>Mutation<br/>prevalence(%)</th>
+  </tr>
+  <tr>
+	<td>A</th>
+	<td>G</td>
+	<td>104</td>
+	<td>S</td>
+	<td>0.5(0.1,0.7)</td>
+	<td>e</td>
+	<td>144/150</td>
+	<td>5(6,5)</td>
+	<td>16.7</td>
+	<td>0.7</td>
+  </tr>
+</table> 
+<br/><br/>
 
 <a href="../network_details/174ENERG_Glyoxylatebypass.html">Network details</a>
 
@@ -111,7 +141,7 @@
 
       // Highlight residue
       viewer.setStyle(
-		{ chain: 'A', resi: 106 },
+		{ chain: 'A', resi: 104 },
         {
           stick: { colorscheme: "greenCarbon", radius: 0.25 },
           sphere: { color: "red", radius: 1.5 }
@@ -119,9 +149,9 @@
       );
 
       // Add label to residue
-      const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 106 })[0];
+      const atomres = viewer.getModel().selectedAtoms({ chain: 'A', resi: 104 })[0];
       if (atomres) {
-        viewer.addLabel("A:G106S", {
+        viewer.addLabel("A:G104S", {
           position: { x: atomres.x, y: atomres.y, z: atomres.z },
           backgroundColor: "black",
           fontColor: "white",

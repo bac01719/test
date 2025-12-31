@@ -14,7 +14,7 @@
 <div id="viewer_3Dmoljs"></div>
 <h1>%PRT% - %PDBNAME%</h1>
 Label format: [chain]:[wildtype][pos][mutant](pLDDT,mean PAE, proportion of PAE<5)<br/><br/>
-<a href="%NETWORKDETAILS%">Network details</a>
+
 <h3>Model validation</h3>
 <img src="%PAEDETAILS%">
 <table border="1">
@@ -35,6 +35,134 @@ Label format: [chain]:[wildtype][pos][mutant](pLDDT,mean PAE, proportion of PAE<
 	<td>%PDLLTO70%</td>
   </tr>
 </table> 
+<br/><br/>
+<h3>QMEAN details</h3>
+<table border="1">
+  <tr>
+    <th>Score type</th>
+	<th>Solvent Accessibility<br/>Agreement</th>
+	<th>C-beta Interaction<br/>Potential</th>
+	<th>All-Atom Interaction<br/>Potential</th>
+	<th>Secondary Structure<br/>Agreement</th>
+	<th>Torsion Angle<br/>Potential</th>
+  </tr>
+  <tr>
+	<td>Normalised</td>
+	<td>%ACC_AGREEMENT_N%</td>
+	<td>%CBETA_N%</td>
+	<td>%INTERACTION_N%</td>
+	<td>%SS_AGREEMENT_N%</td>
+	<td>%TORSION_N%</td>
+  </tr>
+  <tr>
+	<td>Z-Score</td>
+	<td>%ACC_AGREEMENT_Z%</td>
+	<td>%CBETA_Z%</td>
+	<td>%INTERACTION_Z%</td>
+	<td>%SS_AGREEMENT_Z%</td>
+	<td>%TORSION_Z%</td>
+  </tr>
+</table> 
+<br/><br/>
+<table border="1">
+	<tr>
+		<th>Average Local<br/>Quality Score</th>
+		<th>Average Local<br/>Quality Score Error</th>	
+	  </tr>
+	  <tr>
+		<td>%AVG_LOCAL_SCORE%</td>
+		<td>%AVG_LOCAL_SCORE_ERROR%</td>
+	  </tr>
+	</tr> 
+</table>	
+<br/><br/>
+<table border="1">
+	<tr>
+		<th>Score type</th>
+		<th>QMEAN4</th>	
+		<th>QMEAN6</th>
+	  </tr>
+	  <tr>
+		<td>Normalised</td>
+		<td>%QMEAN4_N%</td>
+		<td>%QMEAN6_N%</td>
+	  </tr>
+	  <tr>
+		<td>Z-Score</td>
+		<td>%QMEAN4_Z%</td>
+		<td>%QMEAN6_Z%</td>
+	  </tr>
+	</tr> 
+</table>	
+<br/><br/>
+<table border="1">
+	<tr>
+		<th>Chain</th>
+		<th>Wildtype</th>
+		<th>Residue</th>	
+		<th>Mutation</th>
+		<th>QMEAN</th>
+	  </tr>
+	  <tr>
+		<td>%CHAIN1%</th>
+		<td>%RESI1%</td>
+		<td>%RESIPOS1%</td>
+		<td>%MUT1%</td>
+		<td>%QMEAN1%</td>
+	  </tr>
+	  <tr>
+		<td>%CHAIN2%</th>
+		<td>%RESI2%</td>
+		<td>%RESIPOS2%</td>
+		<td>%MUT2%</td>
+		<td>%QMEAN2%</td>
+	  </tr>
+	</tr> 
+</table>	
+<br/><br/>
+
+<h3>CONSURF details</h3>
+<table border="1">
+  <tr>
+    <th>Chain</th>
+	<th>Wildtype</th>
+	<th>Residue</th>
+	<th>Mutation</th>
+	<th>Average Pairwise<br/>Distance</th>
+	<th>Buried/Exposed</th>
+	<th>MSA data</th>
+	<th>Conservation<br/>(1-variable,9-conserved)</th>
+	<th>Wildtype</br>prevalence(%)</th>
+	<th>Mutation<br/>prevalence(%)</th>
+  </tr>
+  <tr>
+	<td>%CHAIN1%</th>
+	<td>%RESI1%</td>
+	<td>%RESIPOS1%</td>
+	<td>%MUT1%</td>
+	<td>%CONSURF_APD1%(%CONSURF_LAPD1%,%CONSURF_UAPD1%)</td>
+	<td>%CONSURF_BURIED_EXPOSE1%</td>
+	<td>%CONSURF_MSA_DATA1%</td>
+	<td>%CONSURF_COLOR1%(%CONSURF_LCOLOR1%,%CONSURF_UCOLOR1%)</td>
+	<td>%CONSURF_WILDTYPE_VAR1%</td>
+	<td>%CONSURF_MUT_VAR1%</td>
+  </tr>
+  <tr>
+	<td>%CHAIN2%</th>
+	<td>%RESI2%</td>
+	<td>%RESIPOS2%</td>
+	<td>%MUT2%</td>
+	<td>%CONSURF_APD2%(%CONSURF_LAPD2%,%CONSURF_UAPD2%)</td>
+	<td>%CONSURF_BURIED_EXPOSE2%</td>
+	<td>%CONSURF_MSA_DATA2%</td>
+	<td>%CONSURF_COLOR2%(%CONSURF_LCOLOR2%,%CONSURF_UCOLOR2%)</td>
+	<td>%CONSURF_WILDTYPE_VAR2%</td>
+	<td>%CONSURF_MUT_VAR2%</td>
+  </tr>
+</table> 
+<br/><br/>
+
+<a href="%NETWORKDETAILS%">Network details</a>
 
 <script>
   const element = document.getElementById("viewer_3Dmoljs");

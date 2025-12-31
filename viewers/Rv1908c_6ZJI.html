@@ -83,21 +83,63 @@
 		<th>QMEAN</th>
 	  </tr>
 	  <tr>
-		<td>B</th>
+		<td>BP1</th>
 		<td>R</td>
 		<td>463</td>
 		<td>L</td>
-		<td>0.72</td>
+NA
 	  </tr>
 	  <tr>
-		<td>B</th>
+		<td>BP1</th>
 		<td>S</td>
 		<td>315</td>
 		<td>T</td>
-		<td>0.85</td>
+NA
 	  </tr>
 	</tr> 
 </table>		
+<br/><br/>
+
+<h3>CONSURF details</h3>
+<table border="1">
+  <tr>
+    <th>Chain</th>
+	<th>Wildtype</th>
+	<th>Residue</th>
+	<th>Mutation</th>
+	<th>Average Pairwise<br/>Distance</th>
+	<th>Buried/Exposed</th>
+	<th>MSA data</th>
+	<th>Conservation<br/>(1-variable,9-conserved)</th>
+	<th>Wildtype</br>prevalence(%)</th>
+	<th>Mutation<br/>prevalence(%)</th>
+  </tr>
+  <tr>
+	<td>BP1</th>
+	<td>R</td>
+	<td>463</td>
+	<td>L</td>
+	<td>0.5(0.1,0.8)</td>
+	<td>b</td>
+	<td>150/150</td>
+	<td>5(6,5)</td>
+	<td>0.7</td>
+	<td>84.7</td>
+  </tr>
+  <tr>
+	<td>BP1</th>
+	<td>S</td>
+	<td>315</td>
+	<td>T</td>
+	<td>0.5(0.1,0.8)</td>
+	<td>e</td>
+	<td>150/150</td>
+	<td>9(9,9)</td>
+	<td>93.3</td>
+	<td>0</td>
+  </tr>
+</table> 
+<br/><br/>
 
 <a href="../network_details/121STRES_ResistancetoEthionamidean.html">Network details</a>
 
@@ -107,8 +149,8 @@
 
   // List of mutations: { residue number, mutation label }
   const mutations = [
-    { chain: 'B', resi: 463, label: "B:R463L", color: "red" },
-    { chain: 'B', resi: 315, label: "B:S315T", color: "blue" }
+    { chain: 'BP1', resi: 463, label: "BP1:R463L", color: "red" },
+    { chain: 'BP1', resi: 315, label: "BP1:S315T", color: "blue" }
   ];
 
   const pdbUrl = "https://files.rcsb.org/download/6ZJI.pdb";
