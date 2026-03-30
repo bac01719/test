@@ -215,6 +215,40 @@
 </table> 
 <br/><br/> 
 
+<h3>Fpocket details</h3>
+<table border="1">
+  <tr>
+    <th>Category</th>
+	<th>Description</th>	
+  </tr>
+  <tr>
+	<td>%CONSERVED%</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &le; %CENTROID_LCUTOFF% &angst; AND <br/>residual overlap between pockets measured with Jaccard Index is &ge; %JACCARD_UCUTOFF%</td>
+  </tr>
+  <tr>
+	<td>%SHIFTED%</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &le; %CENTROID_LCUTOFF% &angst; OR <br/>residual overlap between pockets measured with Jaccard Index is &le; %JACCARD_UCUTOFF% AND<br/>is not %CONSERVED%</td>
+  </tr>
+  <tr>
+	<td>%GRAY%</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &gt; %CENTROID_LCUTOFF% &angst; AND &le; %CENTROID_UCUTOFF% &angst; AND<br/>residual overlap measured between pockets with Jaccard Index is &lt; %JACCARD_LCUTOFF% AND &lt; %JACCARD_UCUTOFF%</td>
+  </tr>
+  <tr>
+	<td>%DISSIMILAR%</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &gt; %CENTROID_UCUTOFF% &angst; AND <br/>residual overlap measured between pockets with Jaccard Index is &le; %JACCARD_LCUTOFF%</td>
+  </tr>
+</table> 
+<br/><br/>
+<h4>Plot of Centroid distance (&angst;) and Jaccard index between pockets on wildtype and mutated structures</h4>
+<img src="%FPOCKET_PLOT%">
+<br/>
+<h4>Category proportion of pocket changes from wildtype to mutated structure</h4>
+<img src="%FPOCKET_PIE%">
+<br/>
+<h4>Variation of key metrics from wildtype in mutated structure</h4>
+<img src="%FPOCKET_MATRIX%">
+<br/>
+
 <a href="%NETWORKDETAILS%">Network details</a>
 
 <script>

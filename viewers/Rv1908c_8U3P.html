@@ -196,6 +196,40 @@
 </table> 
 <br/><br/> 
 
+<h3>Fpocket details</h3>
+<table border="1">
+  <tr>
+    <th>Category</th>
+	<th>Description</th>	
+  </tr>
+  <tr>
+	<td>conserved</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &le; 5 &angst; AND <br/>residual overlap between pockets measured with Jaccard Index is &ge; 0.6</td>
+  </tr>
+  <tr>
+	<td>shifted</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &le; 5 &angst; OR <br/>residual overlap between pockets measured with Jaccard Index is &le; 0.6 AND<br/>is not conserved</td>
+  </tr>
+  <tr>
+	<td>gray</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &gt; 5 &angst; AND &le; 10 &angst; AND<br/>residual overlap measured between pockets with Jaccard Index is &lt; 0.1 AND &lt; 0.6</td>
+  </tr>
+  <tr>
+	<td>dissimilar</td>
+	<td>Centroid distance between pockets on wildtype and mutated structures is &gt; 10 &angst; AND <br/>residual overlap measured between pockets with Jaccard Index is &le; 0.1</td>
+  </tr>
+</table> 
+<br/><br/>
+<h4>Plot of Centroid distance (&angst;) and Jaccard index between pockets on wildtype and mutated structures</h4>
+<img src="../fpocket/fpocket_8U3P_plot.png">
+<br/>
+<h4>Category proportion of pocket changes from wildtype to mutated structure</h4>
+<img src="../fpocket/fpocket_8U3P_pie.png">
+<br/>
+<h4>Variation of key metrics from wildtype in mutated structure</h4>
+<img src="../fpocket/fpocket_8U3P_matrix.png">
+<br/>
+
 <a href="../network_details/121STRES_ResistancetoEthionamidean.html">Network details</a>
 
 <script>
